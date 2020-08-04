@@ -50,16 +50,16 @@
         [NNReloadOperationSanitizer sanitizeOperations:self.currentOperations customReloadAllowed:self.cellCustomReloadBlock != nil];
         
         [self applyOperations:self.currentOperations];
+
+        if (self.cellCustomReloadBlock) {
+            [self applyCustomReloadOperations:self.currentOperations];
+        }
     } completion:^(BOOL finished) {
         if (completion) {
             completion();
         }
     }];
-    
-    if (self.cellCustomReloadBlock) {
-        [self applyCustomReloadOperations:self.currentOperations];
-    }
-    
+
     self.currentOperations = nil;
 }
 
@@ -197,7 +197,7 @@
 - (void)applyCustomReloadOperations:(NNReloadOperations *)operations {
     for (NNIndexPathReloadOperation *operation in operations.indexPathOperations) {
         if (operation.type == NNReloadOperationTypeCustomReload) {
-            id cell = [self.collectionView cellForItemAtIndexPath:operation.after];
+            id cell = [self.collectionView cellForItemAtIndexPath:operation.before];
             self.cellCustomReloadBlock(cell, operation.after);
         }
     }

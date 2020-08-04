@@ -55,13 +55,13 @@
     [NNReloadOperationSanitizer sanitizeOperations:self.currentOperations customReloadAllowed:self.cellCustomReloadBlock != nil];
     
     [self applyOperations:self.currentOperations];
-    
-    [self.tableView endUpdates];
-    
+
     if (self.cellCustomReloadBlock) {
         [self applyCustomReloadOperations:self.currentOperations];
     }
-    
+
+    [self.tableView endUpdates];
+
     self.currentOperations = nil;
     
     if (completion) {
@@ -207,7 +207,7 @@
 - (void)applyCustomReloadOperations:(NNReloadOperations *)operations {
     for (NNIndexPathReloadOperation *operation in operations.indexPathOperations) {
         if (operation.type == NNReloadOperationTypeCustomReload) {
-            id cell = [self.tableView cellForRowAtIndexPath:operation.after];
+            id cell = [self.tableView cellForRowAtIndexPath:operation.before];
             self.cellCustomReloadBlock(cell, operation.after);
         }
     }
