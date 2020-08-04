@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-typedef void (^NNCellCustomReloadBlock)(id cell, NSIndexPath *indexPath);
+typedef void (^NNCellCustomReloadBlock)(__kindof UIView *cell, NSIndexPath *indexPath);
 
 
 NS_ASSUME_NONNULL_END
