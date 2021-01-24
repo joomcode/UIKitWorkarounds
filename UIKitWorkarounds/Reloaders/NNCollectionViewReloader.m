@@ -41,7 +41,7 @@
 
 #pragma mark - Public
 
-- (void)performUpdates:(void (^)(void))updates completion:(void (^)(void))completion {
+- (void)performUpdates:(void (NS_NOESCAPE ^)(void))updates completion:(void (^)(void))completion {
     [self.collectionView performBatchUpdates:^{
         self.currentOperations = [[NNReloadOperations alloc] init];
         
