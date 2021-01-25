@@ -29,7 +29,7 @@
 		01A28D671C59764E006F0A95 /* NNCellCustomReloadBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 01A356D41C4861D4009969A3 /* NNCellCustomReloadBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		01A28D681C59764E006F0A95 /* NNTableViewReloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 01A356CB1C4854D2009969A3 /* NNTableViewReloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		01A28D691C59764E006F0A95 /* NNCollectionViewReloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 01A356D51C4882D2009969A3 /* NNCollectionViewReloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		01A28D8A1C598FE9006F0A95 /* NNSwizzlingUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 01A28D881C598FE9006F0A95 /* NNSwizzlingUtils.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		01A28D8A1C598FE9006F0A95 /* NNSwizzlingUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 01A28D881C598FE9006F0A95 /* NNSwizzlingUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		01A28D8B1C598FE9006F0A95 /* NNSwizzlingUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A28D891C598FE9006F0A95 /* NNSwizzlingUtils.m */; };
 /* End PBXBuildFile section */
 

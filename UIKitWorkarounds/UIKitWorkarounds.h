@@ -22,3 +22,5 @@ FOUNDATION_EXPORT const unsigned char UIKitWorkaroundsVersionString[];
 
 #import <UIKitWorkarounds/UINavigationController+NNInterfaceOrientation.h>
 #import <UIKitWorkarounds/UITabBarController+NNInterfaceOrientation.h>
+
+#import <UIKitWorkarounds/NNSwizzlingUtils.h>
