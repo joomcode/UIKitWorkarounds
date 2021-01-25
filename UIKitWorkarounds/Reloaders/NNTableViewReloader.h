@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "NNCellCustomReloadBlock.h"
+#import <UIKitWorkarounds/NNCellCustomReloadBlock.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)init NS_UNAVAILABLE;
 
 
-- (void)performUpdates:(void (^)())updates completion:(nullable void (^)())completion;
+- (void)performUpdates:(void (^)(void))updates completion:(nullable void (^)(void))completion;
 
 - (void)insertSections:(NSIndexSet *)sections withRowAnimation:(UITableViewRowAnimation)animation;
 - (void)deleteSections:(NSIndexSet *)sections withRowAnimation:(UITableViewRowAnimation)animation;
