@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong, readonly) UICollectionView *collectionView;
 
+@property (nonatomic, copy, nullable) void(^didApplyOperationsHandler)(void);
+
 - (instancetype)initWithCollectionView:(UICollectionView *)collectionView;
 
 - (instancetype)initWithCollectionView:(UICollectionView *)collectionView

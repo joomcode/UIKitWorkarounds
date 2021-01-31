@@ -54,6 +54,10 @@
         if (self.cellCustomReloadBlock) {
             [self applyCustomReloadOperations:self.currentOperations];
         }
+
+        if (self.didApplyOperationsHandler) {
+            self.didApplyOperationsHandler();
+        }
     } completion:^(BOOL finished) {
         if (completion) {
             completion();
